@@ -17,5 +17,15 @@ source(file.path(script_path, "set_env.R"), chdir = T)
 config <- load_config()
 args <- args_parser()
 
-tables <- sudokusolver::load_tables(file.path(script_path, "../data/p096_sudoku.txt"))
+tables <- sudokusolver::load_tables(file.path(script_path,
+                                              "../data/p096_sudoku.txt"))
+loginfo("-> Tables loaded [%d]", length(tables))
+
 system.time(results <- sudokusolver::solve(tables))
+
+loginfo("-> All problems solved [%d]", length(results))
+
+sudokusolver::save_results(results,
+                           file.path(script_path, "../export/results.txt"))
+
+loginfo("-> Solutions saved")
