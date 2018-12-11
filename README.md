@@ -39,3 +39,12 @@ Rscript R/solve.R
 The command must be run in a project folder. 
 
 The results are exported into `export` directory.
+
+## For impatient
+
+I have prepared binary deployment packages with [R Suite](https://rsuite.io). To use them you have to download, unzip and run the solver as described above. **You only need R in version 3.5+**
+
+The binary versions:
+
+* [Windows](https://s3.eu-central-1.amazonaws.com/wlog-share/SuDokuR/SuDokuR_win_1.0x.zip)
+* [Ubuntu 14.04](https://s3.eu-central-1.amazonaws.com/wlog-share/SuDokuR/SuDokuR_ubuntu14_04_1.0x.zip)
